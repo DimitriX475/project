@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парк Аттракционов "Радуга"</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Парк Аттракционов "Радуга"</h1>
+        <nav>
+            <ul>
+                <li><a href="#info">О парке</a></li>
+                <li><a href="#rides">Аттракционы</a></li>
+                <li><a href="#tickets">Билеты</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#events">Мероприятия</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="info">
+            <h2>О нашем парке</h2>
+            <p>Парк "Радуга" - это современный парк аттракционов с более чем 30 захватывающими аттракционами для посетителей всех возрастов. Мы работаем с 2010 года и постоянно развиваемся!</p>
+            <div class="info-cards">
+                <div class="service-card">
+                    <h3>Часы работы</h3>
+                    <p><strong>Летний сезон (май-сентябрь):</strong> ежедневно с 10:00 до 23:00</p>
+                    <p><strong>Зимний сезон (октябрь-апрель):</strong> сб-вс с 10:00 до 20:00</p>
+                    <button id="scheduleBtn">Подробное расписание</button>
+                </div>
+                <div class="service-card">
+                    <h3>Как добраться</h3>
+                    <p>Мы находимся по адресу: г. Москва, Парковая ул., д. 1</p>
+                    <p>Бесплатная парковка на 500 мест</p>
+                    <button id="mapBtn">Открыть карту</button>
+                    <button id="transportBtn">Маршруты транспорта</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="rides">
+            <h2>Наши аттракционы</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">Все</button>
+                <button class="filter-btn" data-category="extreme">Экстрим</button>
+                <button class="filter-btn" data-category="family">Семейные</button>
+                <button class="filter-btn" data-category="kids">Детские</button>
+                <button class="filter-btn" data-category="water">Водные</button>
+            </div>
+            
+            <div class="rides-container">
+                <article class="ride-card" data-category="extreme">
+                    <h3>Гигантские горки "Ураган"</h3>
+                    <p>Самые высокие горки в стране! Высота - 85 метров, скорость - до 120 км/ч. Для посетителей от 16 лет.</p>
+                    <button class="ride-info-btn">Подробнее</button>
+                    <button class="ride-photo-btn">Фото</button>
+                    <button class="ride-video-btn">Видео</button>
+                </article>
+                
+                <article class="ride-card" data-category="family">
+                    <h3>Колесо обозрения "Панорама"</h3>
+                    <p>Наслаждайтесь великолепным видом на город с высоты 60 метров. Полный оборот занимает 15 минут.</p>
+                    <button class="ride-info-btn">Подробнее</button>
+                </article>
+                
+                <article class="ride-card" data-category="water">
+                    <h3>Водный лабиринт "Цунами"</h3>
+                    <p>Охладитесь в жаркий день на наших водных горках с неожиданными поворотами и водопадами.</p>
+                    <button class="ride-info-btn">Подробнее</button>
+                </article>
+                
+                <article class="ride-card" data-category="kids">
+                    <h3>Детский городок "Сказка"</h3>
+                    <p>Безопасная и веселая площадка для детей 3-10 лет с горками, качелями и батутами.</p>
+                    <button class="ride-info-btn">Подробнее</button>
+                </article>
+                
+                <article class="ride-card" data-category="extreme">
+                    <h3>Башня свободного падения</h3>
+                    <p>Испытайте 3 секунды невесомости при падении с высоты 50 метров!</p>
+                    <button class="ride-info-btn">Подробнее</button>
+                </article>
+                
+                <article class="ride-card" data-category="family">
+                    <h3>Дом ужасов "Лабиринт страха"</h3>
+                    <p>Пройти 200 метров в полной темноте, где вас ждут неожиданные встречи... Для посетителей от 12 лет.</p>
+                    <button class="ride-info-btn">Подробнее</button>
+                </article>
+            </div>
+            
+            <button id="all-rides-btn">Все аттракционы</button>
+            <button id="new-rides-btn">Новинки сезона</button>
+            <button id="popular-rides-btn">Популярные</button>
+        </section>
+
+        <section id="tickets">
+            <h2>Билеты и цены</h2>
+            
+            <div class="ticket-options">
+                <div class="ticket-card">
+                    <h3>Взрослый</h3>
+                    <p><strong>1500 руб.</strong></p>
+                    <p>Доступ на все аттракционы</p>
+                    <button class="buy-ticket-btn">Купить</button>
+                </div>
+                
+                <div class="ticket-card">
+                    <h3>Детский</h3>
+                    <p><strong>800 руб.</strong></p>
+                    <p>Для детей 5-12 лет</p>
+                    <button class="buy-ticket-btn">Купить</button>
+                </div>
+                
+                <div class="ticket-card">
+                    <h3>Семейный</h3>
+                    <p><strong>3500 руб.</strong></p>
+                    <p>2 взрослых + 2 ребенка</p>
+                    <button class="buy-ticket-btn">Купить</button>
+                </div>
+                
+                <div class="ticket-card">
+                    <h3>Групповой</h3>
+                    <p><strong>1200 руб./чел.</strong></p>
+                    <p>От 10 человек</p>
+                    <button class="buy-ticket-btn">Купить</button>
+                </div>
+                
+                <div class="ticket-card">
+                    <h3>Вечерний</h3>
+                    <p><strong>1000 руб.</strong></p>
+                    <p>После 18:00</p>
+                    <button class="buy-ticket-btn">Купить</button>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <h3>Сезонные абонементы</h3>
+                <p>Экономия до 40% при покупке абонемента на весь сезон!</p>
+                <button id="season-pass-btn">Подробнее об абонементах</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Подарочные карты</h3>
+                <p>Дарите эмоции - подарочные карты номиналом от 1000 до 10000 рублей.</p>
+                <button id="gift-card-btn">Купить подарочную карту</button>
+            </div>
+            
+            <button id="discounts-btn">Скидки и акции</button>
+            <button id="corporate-btn">Корпоративные предложения</button>
+        </section>
+
+        <section id="services">
+            <h2>Дополнительные услуги</h2>
+            
+            <div class="service-card">
+                <h3>Аренда беседок</h3>
+                <p>Уютные беседки для отдыха компанией до 10 человек. Бронирование заранее.</p>
+                <button class="service-btn">Забронировать</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Фотосессии</h3>
+                <p>Профессиональная фотосессия в парке. 50+ локаций, цифровые фото сразу.</p>
+                <button class="service-btn">Записаться</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Организация праздников</h3>
+                <p>Дни рождения, корпоративы, свадьбы. Полный комплекс услуг.</p>
+                <button class="service-btn">Подробнее</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Экскурсии по парку</h3>
+                <p>Узнайте историю парка и интересные факты об аттракционах.</p>
+                <button class="service-btn">Записаться</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Кафе и рестораны</h3>
+                <p>10 точек питания на территории с разнообразной кухней.</p>
+                <button id="food-btn">Меню и карта</button>
+            </div>
+            
+            <button id="all-services-btn">Все услуги парка</button>
+        </section>
+
+        <section id="events">
+            <h2>Мероприятия и события</h2>
+            
+            <div class="service-card">
+                <h3>Ночные покатушки</h3>
+                <p>Каждую пятницу и субботу - специальная программа с музыкой и световыми шоу до 2:00 ночи.</p>
+                <button class="event-btn">Расписание</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Фестиваль воздушных змеев</h3>
+                <p>15-16 июля - красочное шоу и мастер-классы по созданию змеев.</p>
+                <button class="event-btn">Участвовать</button>
+            </div>
+            
+            <div class="service-card">
+                <h3>Детские дни</h3>
+                <p>Каждое воскресенье - специальная программа с аниматорами и конкурсами.</p>
+                <button class="event-btn">Программа</button>
+            </div>
+            
+            <button id="calendar-btn">Календарь событий</button>
+            <button id="subscribe-btn">Подписаться на анонсы</button>
+        </section>
+
+        <section id="reviews">
+            <h2>Отзывы посетителей</h2>
+            
+            <div class="review-card">
+                <h3>Алексей ★★★★★</h3>
+                <p>«Лучший парк, в котором я когда-либо был! Аттракционы просто потрясающие, особенно "Ураган" - адреналин зашкаливает!»</p>
+                <p class="review-date">15 мая 2023</p>
+            </div>
+            
+            <div class="review-card">
+                <h3>Мария ★★★★☆</h3>
+                <p>«Отличное место для семейного отдыха. Дети в восторге от детского городка. Единственное - очереди в выходные.»</p>
+                <p class="review-date">8 июня 2023</p>
+            </div>
+            
+            <div class="review-card">
+                <h3>Дмитрий ★★★★★</h3>
+                <p>«Американские горки - это просто нечто! Обязательно вернусь! Отдельное спасибо за чистоту и организацию.»</p>
+                <p class="review-date">22 апреля 2023</p>
+            </div>
+            
+            <button id="add-review-btn">Оставить отзыв</button>
+            <button id="all-reviews-btn">Все отзывы</button>
+        </section>
+
+        <section id="gallery">
+            <h2>Фотогалерея</h2>
+            <p>Посмотрите, как весело проводят время наши гости!</p>
+            <!-- Здесь будет галерея изображений -->
+            <button id="photo-gallery-btn">Фото парка</button>
+            <button id="event-photos-btn">Фото с мероприятий</button>
+            <button id="upload-photo-btn">Добавить свои фото</button>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            
+            <div class="contact-info">
+                <p><strong>Адрес:</strong> г. Москва, Парковая ул., д. 1</p>
+                <p><strong>Телефон:</strong> +7 (495) 123-45-67</p>
+                <p><strong>Email:</strong> info@park-raduga.ru</p>
+                <p><strong>Социальные сети:</strong></p>
+                <div class="social-buttons">
+                    <button class="social-btn">VK</button>
+                    <button class="social-btn">Telegram</button>
+                    <button class="social-btn">YouTube</button>
+                    <button class="social-btn">Instagram</button>
+                </div>
+            </div>
+            
+            <h3>Обратная связь</h3>
+            <form id="contactForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone">
+                
+                <label for="subject">Тема:</label>
+                <select id="subject" name="subject">
+                    <option value="general">Общий вопрос</option>
+                    <option value="tickets">Билеты</option>
+                    <option value="events">Мероприятия</option>
+                    <option value="feedback">Отзыв</option>
+                    <option value="cooperation">Сотрудничество</option>
+                </select>
+                
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Отправить</button>
+            </form>
+            
+            <div class="service-card">
+                <h3>Работа в парке</h3>
+                <p>Мы всегда рады талантливым людям! Отправьте резюме:</p>
+                <button id="jobs-btn">Вакансии</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Парк Аттракционов "Радуга"</p>
+            <p><a href="#privacy">Политика конфиденциальности</a> | <a href="#terms">Правила посещения</a></p>
+            <button id="newsletter-btn">Подписаться на рассылку</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <div class="image-container">
+        <img src="C:\Users\student_ait405\Desktop\22222222.jpg" alt="Описание изображения" class="styled-image">
+    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с фоном</title>
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Файл стилей должен быть в той же папке -->
+</head>
+<body>
+    <!-- Любой контент -->
+    <h1></h1>
+</body>
+</html>
